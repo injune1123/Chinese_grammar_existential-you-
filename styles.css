@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+#homepage{
+	height:100vh;
+	background: url(./public/pics/background.jpg);
+	background-size: cover;
+	color:white;
+	text-align: center
+}
+
+h1{
+	margin: 0px 0 0 0;
+	padding-top: 15%;
+	font-size:40px;
+	text-shadow: 2px 2px black;
+
+
+
+}
+
+#homepage p{
+	margin: 40px;
+	font-size:20px;
+	text-shadow: 2px 2px black;
+
+
+
+}
+#homepage button{
+	width: 120px;
+	height:50px;
+	border-radius: 5px; 
+	font-size: 20px;
+	border: 0;
+	background-color: #FFBF00;
+	margin-top: 20px; 
+	color: black;
+    box-shadow: 2px 2px 1px black;
+
+
+}
+
+#lessonFlow{
+	height:100vh;
+	text-align: center;
+/*	background: url(overlay-vignette.png);
+*/	padding-top:60px;
+	font-size: 40px;
+}
+
+#factPic, #errorPic, #doPic{
+	width:300px;
+	height: 300px;
+	margin-top: 100px;
+	margin-right: 30px;
+	margin-left: 30px;
+	border-radius: 30%;
+	box-shadow: 10px 10px 5px #888888;
+
+
+}
+#factsPage{
+	height:100vh;
+	text-align: center;
+	background: url(http://img00.deviantart.net/5396/i/2013/016/e/3/high_quality_free_background_old_wall_by_ugurbektas-d5ro8nd.jpg);
+	background:url(http://www.freecreatives.com/wp-content/uploads/2015/03/unique-brick-wall-design-in-brick-wall-texture-it-is-a-high-resolution-brick-wall-background.jpg);
+	padding-top:60px;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	margin: 0 auto;
+	margin-top: 60px;
+	
+
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 960px;
+	height: 480px;
+
+	background: url(./public/pics/Seamless-Polygon-Backgrounds-Vol2-full_Kfb2t3Q.jpg);
+/*	background: url(http://www.planwallpaper.com/static/images/persona_4_background_pattern_by_darkarddeidara-d6nqz2h.png);
+*/	background-size: cover;
+	color: white;
+    box-shadow: 10px 10px 5px black;
+
+}
+
+
+/* flip speed goes here */
+.flipper {
+		padding-top: 5%;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.front h2{
+
+margin-top: 60px;
+font-size:40px;
+
+}
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+
+#errors{
+	height:100vh;
+	text-align: center;
+	background: url(https://farm4.staticflickr.com/3795/9427830022_19ebb7e802_o_d.jpg);
+	padding-top:60px;
+	color:black;
+	background-size: cover;
+}
