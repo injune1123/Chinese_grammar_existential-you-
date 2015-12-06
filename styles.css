@@ -24,7 +24,7 @@ h1 {
     text-shadow: 2px 2px black;
 }
 
-#homepage button {
+button {
     width: 120px;
     height: 50px;
     border-radius: 5px;
@@ -164,92 +164,61 @@ margin-bottom: -50px;
     margin-left: 100px;
 }
 
+#factsTable{
+
+        border-collapse: collapse;
+}
+
+
+#factsTable, #factsTable th, #factsTable td {
+    border: 1px solid black;
+}
+
+#factsTable th{
+
+        width: 200px;
+
+}
+
+#factsTable .structurePlace{
+        width: 150px;
+}
+#factsTable .structureProposition{
+        width: 300px;
+}
+#factsTable .structureYou{
+        width: 150px;
+}
+#factsTable .structureThings{
+        width: 200px;
+
+}
+
+
 #factsPage {
     height: 100vh;
     text-align: center;
     background: url(http://img00.deviantart.net/5396/i/2013/016/e/3/high_quality_free_background_old_wall_by_ugurbektas-d5ro8nd.jpg);
-    background: url(http://www.freecreatives.com/wp-content/uploads/2015/03/unique-brick-wall-design-in-brick-wall-texture-it-is-a-high-resolution-brick-wall-background.jpg);
+    background: url(https://farm4.staticflickr.com/3795/9427830022_19ebb7e802_o_d.jpg);
+
     padding-top: 60px;
 }
 
 
-/* entire container, keeps perspective */
-
-#factsPage .flip-container {
-    perspective: 1000;
-    margin: 0 auto;
-    margin-top: 60px;
-}
-
-
-/* flip the pane when hovered */
-
-#factsPage .flip-container:hover .flipper,
-#factsPage .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-}
-
-#factsPage .flip-container,
-#factsPage .front,
-#factsPage .back {
-
-    width: 960px;
-    height: 480px;
-    background: url(./public/pics/Seamless-Polygon-Backgrounds-Vol2-full_Kfb2t3Q.jpg);
-    /*	background: url(http://www.planwallpaper.com/static/images/persona_4_background_pattern_by_darkarddeidara-d6nqz2h.png);
-*/
-    background-size: cover;
-    color: white;
-    box-shadow: 10px 10px 5px black;
-}
-
-
-/* flip speed goes here */
-
-#factsPage .flipper {
-    padding-top: 5%;
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-}
-
-
-/* hide back of pane during swap */
-
-#factsPage .front,
-#factsPage .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-/* front pane, placed above back */
-
-#factsPage .front {
-    z-index: 2;
-    /* for firefox 31 */
-    transform: rotateY(0deg);
-}
-
-#factsPage .front h2 {
-    margin-top: 60px;
-    font-size: 40px;
-}
-
-
-/* back, initially hidden pane */
-
-#factsPage .back {
-    transform: rotateY(180deg);
-}
 
 #errors {
     height: 100vh;
     text-align: center;
-    background: url(https://farm4.staticflickr.com/3795/9427830022_19ebb7e802_o_d.jpg);
     padding-top: 60px;
     color: black;
     background-size: cover;
+}
+
+#do{
+    height: 100vh;
+    background: url(http://droider.ru/wp-content/uploads/2014/11/google-now-artwork-minimalistic-2794284-1920x1080.jpg);
+    background-size: cover;
+    text-align: center;
+    color:black;
+
 }

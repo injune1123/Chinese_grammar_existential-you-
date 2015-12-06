@@ -22,7 +22,7 @@
 
  -->
         <div class="container">
-        <h2>The Flow of the lesson</h2>
+            <h2>The Flow of the lesson</h2>
             <div class="row">
                 <div class="flip-container
  col-md-4" ontouchstart="this.classList.toggle('hover');">
@@ -65,7 +65,7 @@
  -->
             </div>
         </div>
-        <div class="row" id = "slogan">
+        <div class="row" id="slogan">
             <div class="col-md-4">Learn
             </div>
             <div class="col-md-4">Understand
@@ -76,16 +76,32 @@
     </div>
     <div id="factsPage">
         <div id="facts">
+            <h2>Learn</h2>
             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                 <div class="flipper">
                     <div class="front">
                         <!-- front content -->
-                        <h2>Let's learn the grammar.</h2>
-                        <p>cilck on the words to see explanation of the structure</p>
-                        <p> <b>Structure</b>: Place + localizter + 有 + (number + measure words) +something. </p>
-                        <p> <b>Example</b>: 桌子上有一本书</p>
-                        <p> <b>Meaning</b>: There is a book on the tables</p>
-                        <button> Check your comprehension</button>
+                        <table id="factsTable" style="width:100%">
+                            <tr>
+                                <th>Structure:</th>
+                                <td class="structurePlace">Place</td>
+                                <td class="structureProposition">Chinese Locational Proposition</td>
+                                <td class="structureYou">有</td>
+                                <td class="structureThings">something</td>
+                            </tr>
+                            <tr>
+                                <th>Example:</th>
+                                <td class="structurePlace">桌子</td>
+                                <td class="structureProposition">上</td>
+                                <td class="structureYou">有</td>
+                                <td class="structureThings">一本书</td>
+                            </tr>
+                            <tr>
+                                <th>English Transaltion:</th>
+                                <td colspan="4">There is a book on the table</td>
+                            </tr>
+                        </table>
+                        <button class="btn-btn-primary"> Take Test</button>
                     </div>
                     <div class="back">
                         <!-- back content -->
@@ -105,14 +121,14 @@
         <div>
             桌子有书。
         </div>
-        房间里没有人。 有人吗？ 有几个人？
         <p>Correct the sentences and explain why are the sentences wrong</p>
         <div id="make sentences"></div>
         picture sentences picture sentences picture sentences
+    </div>
+    <div id="do">
         <p> Make the sentences</p>
         密室逃脱，你要描述线索
     </div>
-    <!-- pinyin optional; locationzer to Chinese ;  -->
 </body>
 
 </html>
