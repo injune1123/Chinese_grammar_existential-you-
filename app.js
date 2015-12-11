@@ -18,7 +18,7 @@ var exampleData = [{
             place: "树",
             preposition: "上",
             You: "有",
-            something: "只"
+            something: "只松鼠"
         }
        
     }, {
@@ -67,34 +67,63 @@ var exampleData = [{
     }
 ];
 
-var sentenceOrder=["Place", "Preposition", "You", "Something"];
-
-var tryOne = {
-        id: 1,
-        img: "./public/pics/book_on_a_table.gif",
-        English: "There is a book on the table.",
-        Chinese:{
-            place: "桌子",
-            preposition: "上",
-            You: "有",
-            something: "一本书"
-        }
-    };
 
 
-var exampleItemTMP = "<div class='container'><div class= 'row'><div class='col-md-4' id='examplePic'></div><div class='col-md-8'><table id='exampleTable' class='well'><tr id='EnglishRow'><th>English:</th><td colspan='4'></td></tr><tr id='exampleRow'><th>Example:</th><td class='structurePlace'></td><td class='structureProposition'></td><td class='structureYou'></td><td class='structureThings'></td></tr><tr><th>Order:</th><td class='structurePlace'>Place</td><td class='structureProposition'>Preposition</td><td class='structureYou'><i>You</i></td><td class='structureThings'>something</td></tr></table></div> </div</div>";
+function createAnExample (exampleItemObj){
+	var exampleItemTMP = "<div class='container'><div class= 'row'><div class='col-md-6' id='examplePic'></div><div class='col-md-6'><table id='exampleTable' class='well'><tr id='EnglishRow'><th>English:</th><td colspan='4'></td></tr><tr id='exampleRow'><th>Example:</th><td class='structurePlace'></td><td class='structureProposition'></td><td class='structureYou'></td><td class='structureThings'></td></tr><tr><th>Order:</th><td class='structurePlace'>Place</td><td class='structureProposition'>Preposition</td><td class='structureYou'><i>You</i></td><td class='structureThings'>something</td></tr></table></div> </div</div>";
+	var $exampleItem = $(exampleItemTMP);
+	$exampleItem.find('#examplePic').append("<img src=" + exampleItemObj.img +">");
+	$exampleItem.find('#EnglishRow td').html(exampleItemObj.English);
+	$exampleItem.find('#exampleRow .structurePlace').html(exampleItemObj.Chinese.place);
+	$exampleItem.find('#exampleRow .structureProposition').html(exampleItemObj.Chinese.preposition);
+	$exampleItem.find('#exampleRow .structureYou').html(exampleItemObj.Chinese.You);
+	$exampleItem.find('#exampleRow .structureThings').html(exampleItemObj.Chinese.something);
+	
+	return $exampleItem;
+}
 
-var $exampleItem = $(exampleItemTMP);
+var $exampleItemArr= exampleData.map(createAnExample)
 
-$exampleItem.find('#examplePic').append("<img src=" + tryOne.img +">");
-$exampleItem.find('#EnglishRow td').html(tryOne.English);
-$exampleItem.find('#exampleRow .structurePlace').html(tryOne.Chinese.place);
-$exampleItem.find('#exampleRow .structureProposition').html(tryOne.Chinese.preposition);
-$exampleItem.find('#exampleRow .structureYou').html(tryOne.Chinese.You);
-$exampleItem.find('#exampleRow .structureThings').html(tryOne.Chinese.something);
+var currentLastExampleNumber = 0;
+$('#examples').prepend($exampleItemArr[currentLastExampleNumber]);
+
+if (currentLastExampleNumber === 0){
+	$('#previous').attr('disabled','disabled');
+}
 
 
-$('#examples').append($exampleItem);
+
+$(document).on('click','#next',function(){
+	$('#previous').removeAttr('disabled');;
+
+	currentLastExampleNumber ++;
+	$('#examples').empty();
+	$('#examples').append($exampleItemArr[currentLastExampleNumber]);
+	if (currentLastExampleNumber === 5){
+    $('#next').attr('disabled','disabled');
+}
+
+})
+
+$(document).on('click','#previous',function(){
+	$('#next').removeAttr('disabled');;
+
+	currentLastExampleNumber --;
+	$('#examples').empty();
+	$('#examples').append($exampleItemArr[currentLastExampleNumber]);
+	if (currentLastExampleNumber === 0){
+    $('#previous').attr('disabled','disabled');
+}
+
+})
+
+
+
+
+if (currentLastExampleNumber === 5){
+    $('#next').attr('disabled','disabled');
+}
+
 
 
 // This is what the DOM of exampleItemTemp looks like

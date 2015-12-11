@@ -239,7 +239,11 @@ margin-bottom: -50px;
         width: 300px;
 }
 
-
+[disabled=disabled]{
+    color:white;
+    background-color: #c4c2c2;
+    box-shadow:none; 
+}
 
 
 #errors {
