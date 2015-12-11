@@ -9,3 +9,13 @@ This webpage sets three learning target for learners:
 2.Learning target B: Know how some common errors are different from correct forms[ notice]
 3.Learning target C: generate correct sentences[doing]
 
+
+
+timer:
+
+ var myTimer = setInterval(function(){
+	
+
+ },1000);
+
+clearInterval(myTimer);

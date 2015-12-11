@@ -144,6 +144,7 @@ margin-bottom: -50px;
 }
 
 
+
 /* back, initially hidden pane */
 
 #lessonFlow .back {
@@ -164,38 +165,10 @@ margin-bottom: -50px;
     margin-left: 100px;
 }
 
-#factsTable{
-
-        border-collapse: collapse;
-}
 
 
-#factsTable, #factsTable th, #factsTable td {
-    border: 1px solid black;
-}
 
-#factsTable th{
-
-        width: 200px;
-
-}
-
-#factsTable .structurePlace{
-        width: 150px;
-}
-#factsTable .structureProposition{
-        width: 300px;
-}
-#factsTable .structureYou{
-        width: 150px;
-}
-#factsTable .structureThings{
-        width: 200px;
-
-}
-
-
-#factsPage {
+#examplesPage {
     height: 100vh;
     text-align: center;
     background: url(http://img00.deviantart.net/5396/i/2013/016/e/3/high_quality_free_background_old_wall_by_ugurbektas-d5ro8nd.jpg);
@@ -203,6 +176,69 @@ margin-bottom: -50px;
 
     padding-top: 60px;
 }
+
+#examplesPage h2{
+    text-align: left;
+    color:#FF9800;
+    text-shadow: 2px 2px black;
+
+
+}
+
+#examplesPage .navbar img{
+    width: 50px;
+    height:50px;
+    border-radius: 100%;
+    box-shadow: 4px 4px 2px #888888;
+
+}
+
+#examplesPage .navbar{
+    background-color: rgba(1,1,1,0);
+    margin-top: -60px;
+    padding-bottom: 10px;
+    border-width: 0;
+} 
+
+#examplesTable{
+        margin: 0 auto;
+        border-collapse: collapse;
+        font-size: 40px;
+        margin-top: 150px;
+}
+
+/*
+#factsTable, #factsTable th, #factsTable td {
+    border: 1px solid black;
+}*/
+
+#examplesTable th{
+
+        width: 200px;
+
+}
+
+#examplesTable #EnglishTranslation{
+            text-align: left;
+}
+
+#examplesTable [colspan="4"]{
+          padding-left: 40px;
+}
+
+#examplesTable .structurePlace{
+        width: 180px;
+}
+#examplesTable .structureProposition{
+        width: 300px;
+}
+#factsTable .structureYou{
+        width: 150px;
+}
+#examplesTable .structureThings{
+        width: 300px;
+}
+
 
 
 
@@ -214,6 +250,31 @@ margin-bottom: -50px;
     background-size: cover;
 }
 
+#errors h2{
+    text-align: left;
+    color:#FF9800;
+    text-shadow: 2px 2px black;
+
+
+}
+
+#errors img{
+    width: 50px;
+    height:50px;
+    border-radius: 100%;
+    box-shadow: 4px 4px 2px #888888;
+
+}
+
+#errors .navbar{
+    background-color: rgba(1,1,1,0);
+    margin-top: -60px;
+    padding-bottom: 10px;
+    border-width: 0;
+
+
+} 
+
 #do{
     height: 100vh;
     background: url(http://droider.ru/wp-content/uploads/2014/11/google-now-artwork-minimalistic-2794284-1920x1080.jpg);
@@ -222,3 +283,28 @@ margin-bottom: -50px;
     color:black;
 
 }
+
+
+#do h2{
+    text-align: left;
+color:#FF9800;
+    text-shadow: 2px 2px black;
+
+
+}
+
+#do .navbar img{
+    width: 50px;
+    height:50px;
+    border-radius: 100%;
+    box-shadow: 4px 4px 2px #888888;
+
+}
+
+#do .navbar{
+    background-color: rgba(1,1,1,0);
+    margin-top: -60px;
+    padding-bottom: 10px;
+    border-width: 0;
+
+} 

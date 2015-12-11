@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <title>The existential "You"</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script src="app.js"></script>
+ 
 </head>
 
 <body>
     <div id="homepage">
-        <h1>    Learn the exisential "You" sentences <br>学会有字句</h1>
+        <h1>    Learn the exisential <i>"You"</i> sentences <br>学会有字句</h1>
         <p> Make <span>"There is/are "</span> sentences in the Chinese language accureately</p>
         <button>start now</button>
     </div>
@@ -45,7 +44,7 @@
                             <img src="./public/pics/2.jpg" alt="" id="errorPic">
                         </div>
                         <div class="back">
-                            <p>You will understand the structural differences between "there is/are" sentences and "You" sentences by analyzing common errors</p>
+                            <p>You will understand the structural differences between "there is/are" sentences in English and "You" sentences in Chinese</p>
                         </div>
                     </div>
                 </div>
@@ -74,47 +73,76 @@
             </div>
         </div>
     </div>
-    <div id="factsPage">
-        <div id="facts">
-            <h2>Learn</h2>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front">
-                        <!-- front content -->
-                        <table id="factsTable" style="width:100%">
-                            <tr>
-                                <th>Structure:</th>
-                                <td class="structurePlace">Place</td>
-                                <td class="structureProposition">Chinese Locational Proposition</td>
-                                <td class="structureYou">有</td>
-                                <td class="structureThings">something</td>
-                            </tr>
-                            <tr>
-                                <th>Example:</th>
-                                <td class="structurePlace">桌子</td>
-                                <td class="structureProposition">上</td>
-                                <td class="structureYou">有</td>
-                                <td class="structureThings">一本书</td>
-                            </tr>
-                            <tr>
-                                <th>English Transaltion:</th>
-                                <td colspan="4">There is a book on the table</td>
-                            </tr>
-                        </table>
-                        <button class="btn-btn-primary"> Take Test</button>
-                    </div>
-                    <div class="back">
-                        <!-- back content -->
-                        <div id="assessment for the structure">
-                            <p>drag the structure</p>
-                        </div>
-                    </div>
+    <div id="examplesPage">
+       
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="learn" src="./public/pics/1.jpg">
+                    </a>
                 </div>
+                <h2>Learn the grammar</h2>
             </div>
+        </nav>
+
+
+        <div id="examples">
+            <!-- 1桌子上有一本书，2冰箱里有牛奶， 3街上有很多车，4树上有只小松鼠，5学校附近有很多饭馆-->
+           <!--  <div class="container">
+            <div class="row">
+        
+            <div class="col-md-4">
+                <img src="./public/pics/resturant_near_school.png" alt="">
+             </div>
+        
+            <div class="col-md-8">
+            <table id="factsTable" class="well">
+                <tr id="EnglishTranslation">
+                    <th>English:</th>
+                    <td colspan="4">There is a book on the table.</td>
+                </tr>
+                <tr>
+                    <th>Chinese:</th>
+                    <td class="structurePlace">桌子</td>
+                    <td class="structureProposition">上</td>
+                    <td class="structureYou">有</td>
+                    <td class="structureThings">一本书</td>
+                </tr>
+                <tr>
+                    <th>Order:</th>
+                    <td class="structurePlace">Place</td>
+                    <td class="structureProposition"> Preposition</td>
+                    <td class="structureYou"><i>You</i></td>
+                    <td class="structureThings">something</td>
+                </tr>
+            </table>
+            Former
+            <i class="fa fa-arrow-circle-left fa-lg"></i>
+            <i class="fa fa-arrow-circle-right fa-lg">Next</i>
+            </div>
+            </div>
+            </div>
+
+            <button class="btn-btn-primary"> Take Test</button> -->
         </div>
     </div>
+    </div>
+
+
+
+
     <div id="errors">
-        <h2>Here are the common errors</h2>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="learn" src="./public/pics/2.jpg">
+                    </a>
+                </div>
+                <h2>Understand the Grammar</h2>
+            </div>
+        </nav>
         <div>
             桌子在书。
         </div>
@@ -126,9 +154,25 @@
         picture sentences picture sentences picture sentences
     </div>
     <div id="do">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="learn" src="./public/pics/3.jpg">
+                    </a>
+                </div>
+                <h2>Make the sentences</h2>
+            </div>
+        </nav>
         <p> Make the sentences</p>
         密室逃脱，你要描述线索
     </div>
+
+
+
+       <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
