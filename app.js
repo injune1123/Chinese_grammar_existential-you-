@@ -1,7 +1,18 @@
 //1桌子上有一本书,  2树上有只小松鼠，3街上有很多车，4冰箱里有牛奶，5, 我家门前有两棵树，6学校附近有很多饭馆
 
 var exampleData = [{
-        id: 1,
+        id:1,
+          img: "./public/pics/resturant_near_school.png",
+        English: "There are many resturants near his school.",
+        Chinese: {
+            place: "他的学校",
+            preposition: "附近",
+            You: "有",
+            something: "很多餐馆"
+        }
+
+    },{
+        id: 2,
         img: "./public/pics/book_on_a_table.gif",
         English: "There is a book on the table.",
         Chinese:{
@@ -11,7 +22,7 @@ var exampleData = [{
             something: "一本书"
         }
     }, {
-        id:2,
+        id:3,
              img: "./public/pics/squirrel_on_the_tree.png",
         English: "There is a squirrel on the tree.",
         Chinese: {
@@ -22,7 +33,7 @@ var exampleData = [{
         }
        
     }, {
-        id:3,
+        id:4,
         img: "./public/pics/china-cars-on-street.png",
         English: "There are many cars on the street.",
         Chinese: {
@@ -33,7 +44,7 @@ var exampleData = [{
         }
 
     }, {
-        id:4,
+        id:5,
          img: "./public/pics/milk_in_the_frige.jpg",
         English: "There is some milk in the frige.",
         Chinese: {
@@ -43,7 +54,7 @@ var exampleData = [{
             something: "牛奶"
         }
     }, {
-        id:5,
+        id:6,
          img: "./public/pics/two_trees_in_fornt_of_my_house.jpg",
         English: "There are two trees in front of my house.",
         Chinese: {
@@ -52,18 +63,6 @@ var exampleData = [{
             You: "有",
             something: "两棵树"
         }
-    },
-    {
-    	id:6,
-    	  img: "./public/pics/resturant_near_school.png",
-        English: "There are many resturants near his school.",
-        Chinese: {
-            place: "他学校",
-            preposition: "附近",
-            You: "有",
-            something: "很多餐馆"
-        }
-
     }
 ];
 
@@ -101,6 +100,7 @@ $(document).on('click','#next',function(){
 	$('#examples').append($exampleItemArr[currentLastExampleNumber]);
 	if (currentLastExampleNumber === 5){
     $('#next').attr('disabled','disabled');
+    $("#examplesPage .assessment h3").removeClass("hidden")
 }
 
 })
@@ -125,6 +125,36 @@ if (currentLastExampleNumber === 5){
 }
 
 
+// sort the structure
+$("#sortStructure ol").sortable()
+
+ $(document).on('click',"#examplesPage .assessment h3",function(){
+        $('#examples').addClass("hide");
+        $('#previous').addClass("hide")
+        $('#exampleButtons').addClass("hide");
+
+    $('#sortStructure').removeClass('hidden');
+    $("#examplesPage .assessment h3").addClass('hidden');
+ })
+
+ $(document).on('click',"#sortStructure button",function(){
+    $('.catFeedback').remove();
+    var answer = $('#sortStructure li:nth-child(1)').html()+
+    $('#sortStructure li:nth-child(2)').html()+
+    $('#sortStructure li:nth-child(3)').html()+
+    $('#sortStructure li:nth-child(4)').html()
+    if(answer==="椅子上有一只猫"){
+                $(this).after("<a href='#explanation'><p class='catFeedback'>Go to Next section</p></a>")
+
+        $(this).after("<img src='./public/pics/correct.png' class='catFeedback'>");
+    }
+    else{
+        $(this).after("<p class='catFeedback'>Keep Trying</p>")
+
+        $(this).after("<img src='./public/pics/wrong.png' class='catFeedback'>");
+    }
+
+ })
 
 // This is what the DOM of exampleItemTemp looks like
 // var exampleItemTMP = "<div class='container'>
