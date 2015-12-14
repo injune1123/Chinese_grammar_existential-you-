@@ -34,7 +34,7 @@ color:#FF9800;
 
 #homepage {
     height: 100vh;
-    background: url(url(./public/pics/background.jpg);
+    background: url(../public/pics/background.jpg);
     background-size: cover;
     color: white;
     text-align: center
@@ -203,7 +203,7 @@ margin-bottom: -50px;
 #examplesPage {
     height: 100vh;
     text-align: center;
-    background: url(./public/pics/backgroundForExample.jpg);
+    background: url(../public/pics/backgroundForExample.jpg);
     padding-top: 60px;
     position: relative;
 }
@@ -502,7 +502,7 @@ margin-bottom: -50px;
 
 #do{
     height: 100vh;
-    background: url(./public/pics/backgroundForDo.jpg);
+    background: url(../public/pics/backgroundForDo.jpg);
     background-size: cover;
     text-align: center;
     color:black;
