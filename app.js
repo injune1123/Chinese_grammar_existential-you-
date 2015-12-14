@@ -149,12 +149,17 @@ $("#sortStructure ol").sortable()
         $(this).after("<img src='./public/pics/correct.png' class='catFeedback'>");
     }
     else{
-        $(this).after("<p class='catFeedback'>Keep Trying</p>")
+        $(this).after("<h6 class='catFeedback' id='catFeedbackWrong'>Click on the scrambled words to try again</h6>")
 
-        $(this).after("<img src='./public/pics/wrong.png' class='catFeedback'>");
+        $(this).after("<br><br><img height='50' width='50' src='./public/pics/wrong.png' class='catFeedback'>");
     }
 
  })
+
+
+ $(document).on('click','#sortStructure li',function(){
+    $('.catFeedback').addClass('hidden');
+})
 
 // This is what the DOM of exampleItemTemp looks like
 // var exampleItemTMP = "<div class='container'>
@@ -187,6 +192,125 @@ $("#sortStructure ol").sortable()
 
 
 // The heightlight effect
+
+ $(document).on('click',"#errors button",function(){
+    $("#errors button").addClass('hidden');
+    $(".wellblue p").addClass('hidden');
+    $("#explainStructureCheck").removeClass('hidden');
+    $("#explainMeaningCheck").removeClass('hidden');
+    $("#explainUseCheck").removeClass('hidden');
+    $("#errors h5").removeClass('hidden');
+    $("#errors h4").removeClass('hidden');
+
+ });
+
+
+
+$(document).on('click',"#comprehensionChecking span",function(){
+var formAnswerArr = [];
+var meaningAnswerArr = [];
+var useAnswerArr = [];
+$("[name=structure]:checked").each(function(){formAnswerArr.push($(this).val())});
+$("[name=meaning]:checked").each(function(){meaningAnswerArr.push($(this).val())});
+$("[name=use]:checked").each(function(){useAnswerArr.push($(this).val())})
+
+
+if(formAnswerArr.indexOf("3correct")!= -1){
+    $("#explainStructureCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (formAnswerArr.indexOf("3correct") ==-1)
+{
+    $("#explainStructureCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+if(formAnswerArr.indexOf("2wrong") == -1){
+    $("#explainStructureCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (formAnswerArr.indexOf("2wrong") !=-1)
+{
+    $("#explainStructureCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+
+if(formAnswerArr.indexOf("1correct")!= -1){
+    $("#explainStructureCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (formAnswerArr.indexOf("1correct") ==-1)
+{
+    $("#explainStructureCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+
+
+
+
+if(meaningAnswerArr.indexOf("3wrong")== -1){
+    $("#explainMeaningCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (meaningAnswerArr.indexOf("3wrong") !=-1)
+{
+    $("#explainMeaningCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+if(meaningAnswerArr.indexOf("2correct") != -1){
+    $("#explainMeaningCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (meaningAnswerArr.indexOf("2correct") ==-1)
+{
+    $("#explainMeaningCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+
+if(meaningAnswerArr.indexOf("1correct")!= -1){
+    $("#explainMeaningCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (meaningAnswerArr.indexOf("1correct") ==-1)
+{
+    $("#explainMeaningCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+
+
+
+if(meaningAnswerArr.indexOf("2wrong") == -1){
+    $("#explainUseCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (meaningAnswerArr.indexOf("2wrong") !=-1)
+{
+    $("#explainUseCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+if(meaningAnswerArr.indexOf("1correct")!= -1){
+    $("#explainUseCheck").after("<img src='./public/pics/smile.jpg' class='checkFeedback smile'>");
+}
+if (meaningAnswerArr.indexOf("1correct") ==-1)
+{
+    $("#explainUseCheck").after("<img src='./public/pics/sad.jpeg' class='checkFeedback sad'>");
+}
+
+if($('.smile').length===8){
+$('#nextToFinal').removeClass('hidden');
+
+    $("#nextToFinal").removeClass('hidden');
+    $("#checkAgain").addClass('hidden');
+
+}
+
+if($('.sad').length >0){
+
+    $("#checkAgain").removeClass('hidden');
+}
+})
+
+ $(document).on('click',"#checkAgain",function(){
+    $(".checkFeedback").remove();
+        $("#checkAgain").addClass('hidden');
+ });
+
+
+$(document).on('click',"#done",function(){
+            $("#essayInstruction").addClass('hidden');
+            
+        $("#finalConMess").removeClass('hidden');
+
+        $("#essayResult").removeClass('hidden');
+        $("#theUserEssay").append('<p>'+$("textarea").val()+'</p>');
+ });
+
+
 $("#homepage h1").hide().fadeIn(1000);
 $("#homepage p").hide().fadeIn(1500);
 $("#homepage p span").effect("highlight", {}, 2000);

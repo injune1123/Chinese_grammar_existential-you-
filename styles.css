@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    cursor:pointer;
+}
+
 ul
 {
     list-style-type: none;
@@ -18,7 +23,12 @@ ol, ul {
     margin-bottom: 10px;
 }
 
+h6{
+margin-top: 60px;
+font-size: 20px;
+color:#FF9800;
 
+}
 
 #homepage {
     height: 100vh;
@@ -373,11 +383,15 @@ margin-right: 50px;
 
 }
 
-
+#catFeedbackWrong{
+    color:green;
+    font-size:20px;
+    text-decoration: none;
+}
 
 #errors {
-    height: 100vh;
-    text-align: center;
+    height: 105vh;
+    text-align: left;
     padding-top: 60px;
     color: black;
     background-size: cover;
@@ -388,10 +402,43 @@ margin-right: 50px;
     color:#FF9800;
     text-shadow: 2px 2px black;
 
+}
+
+#errors p{
+font-size: 15px;
 
 }
 
+#explainStructureCheck{
+font-size: 20px;
+}
+#explainMeaningCheck{
+font-size: 20px;
+}
 
+#explainUseCheck{
+font-size: 20px;
+}
+
+
+
+
+.wellblue{
+    background-color: #F4E8FF;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    border-radius: 10%;
+    height:400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.important{
+    text-align: center;
+    font-size: 20px;
+    color: #FF875B;
+}
 #errors .row h2{
     color:#FF5396
 }
@@ -404,14 +451,46 @@ margin-right: 50px;
 
 }
 
+#comprehensionChecking{
+    text-align: center;
+}
+
+
+#comprehensionChecking button{
+    margin-top: 50px;
+width:180px;
+height:70px;
+
+}
+
+#checkInstruction{
+padding-top: 50px;
+padding-bottom: -50px;
+color:#FF49A3;
+font-size: 30px;
+text-shadow: 2px 2px black;
+
+}
+
+#comprehensionChecking span{
+    color:#FF9800;
+margin-bottom: -50px;
+    text-shadow: 2px 2px black;
+    cursor:pointer;
+}
+
 #errors .navbar{
     background-color: rgba(1,1,1,0);
     margin-top: -60px;
     padding-bottom: 10px;
     border-width: 0;
 
-
 } 
+
+
+#nextToFinal{
+    text-decoration: none;
+}
 
 #do{
     height: 100vh;
@@ -444,5 +523,31 @@ color:#FF9800;
     margin-top: -60px;
     padding-bottom: 10px;
     border-width: 0;
-
 } 
+
+#do h4{
+
+    text-align: left;
+}
+
+#do #essayResult span{
+    color:brown;
+    text-align: left;
+
+}
+
+#do p{
+    font-size: 20px;
+    text-align: left;
+}
+
+#do .well{
+    padding-left: 20px;
+}
+
+#do h6{
+    font-size: 60px;
+    text-align: center;
+    color: #FF9800;
+    text-shadow: 2px 2px black;
+}

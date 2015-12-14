@@ -21,9 +21,9 @@
         <!--     <label for="">Learn</label>
 
  -->
+        <a name="classFlow"></a>
         <div class="container">
             <h2>The Flow of the lesson</h2>
-            <a name="classFlow"></a>
             <div class="row">
                 <div class="flip-container
  col-md-4" ontouchstart="this.classList.toggle('hover');">
@@ -34,7 +34,7 @@
  -->
                         </div>
                         <div class="back">
-                            <p>You will learn the structure of the sentence by seeing examples and elaborations</p>
+                            <p>You will see five examples sentences and become familiar with the grammar. After you feel comfortable with the grammar, take a mini quiz!</p>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                             <img src="./public/pics/2.jpg" alt="" id="errorPic">
                         </div>
                         <div class="back">
-                            <p>You will understand the structural differences between "there is/are" sentences in English and "You" sentences in Chinese</p>
+                            <p>You will read about the form, meaning, and use of the grammar and understand when and how to use it. After reading, take a quiz to check your comprehension. </p>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                             <img src="./public/pics/3.jpg" alt="" id="doPic">
                         </div>
                         <div class="back">
-                            <p>You will be able to make your own "You" sentences after seeing some example sentences.</p>
+                            <p>Now that you have learned the garmmar, you will be asked to make your own "You" sentences in this section. Follow the instructions closely.</p>
                         </div>
                     </div>
                 </div>
@@ -67,15 +67,17 @@
             </div>
         </div>
         <div class="row" id="slogan">
-            <div class="col-md-4">Learn
+            <div class="col-md-4"><a href="#learnFromExample">Learn</a>
             </div>
-            <div class="col-md-4">Understand
+            <div class="col-md-4"><a href="#explanation">Understand</a>
             </div>
-            <div class="col-md-4">Do
+            <div class="col-md-4"><a href="#makeSentences">Do</a>
             </div>
         </div>
+        <h6>hover on cards to read more, click on words to go to the sections</h6>
     </div>
     <div id="examplesPage">
+        <a name="learnFromExample"></a>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -83,7 +85,7 @@
                         <img alt="learn" src="./public/pics/1.jpg">
                     </a>
                 </div>
-                <h2>See the examples</h2>
+                <h2>Learn through examples</h2>
             </div>
         </nav>
         <div class="lesson">
@@ -101,7 +103,9 @@
                     <h4 id="catInstruction">According to the following picture, sort the scrambled words by dragging. The vocabulry list is provided to assist you </h4>
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="row"><p calss="specificCatInstruction">picture</p></div>
+                            <div class="row">
+                                <p calss="specificCatInstruction">picture</p>
+                            </div>
                             <div class="row">
                                 <img src="./public/pics/cat_on_the_chair.png" alt="" id="catAssessmentPic">
                             </div>
@@ -110,20 +114,17 @@
                             <div class="row">
                                 <p calss="specificCatInstruction"> Unscramble the words</p>
                             </div>
-
-                                <div class="row" id="sortStructurePad">
-                                 <div id="sortStructure">
+                            <div class="row" id="sortStructurePad">
+                                <div id="sortStructure">
                                     <ol>
                                         <li>有</li>
                                         <li>一只猫</li>
                                         <li>上</li>
                                         <li>椅子</li>
                                     </ol>
-                                   <button>Check</button>
-
+                                    <button>Check</button>
                                 </div>
-                                </div>
-
+                            </div>
                         </div>
                         <div class="col-md-4">
                             <div class="row">
@@ -134,7 +135,7 @@
                                     <li>一只猫 a cat</li>
                                     <li>椅子 chair</li>
                                     <li>上 on </li>
-                                    <li>有 you</li>
+                                    <li>有 There is</li>
                                 </ul>
                             </div>
                         </div>
@@ -145,8 +146,7 @@
     </div>
     </div>
     <div id="errors">
-                      <a name="explanation"></a>
-
+        <a name="explanation"></a>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -160,19 +160,100 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2>Form</h2> The order of the in the Chinese "You" sentences are different from that in English. The prepostion always appears after the place. The place is the first element of the sentence.
+                    <h2>Form</h2>
+                    <div class="wellblue">
+
+                    <p>The structure of the Chinese "You" sentence is <br>
+                    <span class="important"> Place + preposition + 有 + something.</span> 
+                    <br></p>
+                    <p> No.1 The order of the place: In Chinese, the place is <span class="important">at the beginning</span> of the langauge.</p>
+                    <p>No.2 The order of the preposition: In English, the prepostion appears BEFORE the place. In Chinese, <span class="important">the prepostion appears AFTER the place.</span>
+                    </p>
+                    <p>No.3 The measure words: When you are specifiy the numebr of things, you have to <span class="important">use measure words</span>. "A book" in Chinese is "一本书"，the "本" is necessary.
+                    </p>
+
+
+
+                        <div id="explainStructureCheck" class="hidden">
+                        <br>
+                        <input type="checkbox" name="structure" value="1correct">In Chinese "You" sentences, the place is at the beginning of a sentence.<br>
+                        <input type="checkbox" name="structure" value="2wrong">In Chinese, the prepostion appears BEFORE the place.<br>
+                        <input type="checkbox" name="structure" value="3correct">In Chinese "You" sentences, the described object is at the very end of a sentence.<br>
+                    </div>
+
+                    </div>
+
+                   
+
                 </div>
-                <div class="col-md-4">
-                    <h2>Meaning</h2> The meaning of Chinese "You" sentences is the same as the "There is/are" sentences in English: it refers to the existence or presence of someone/something in realtion to a place The keyword "有" is used to denote existence. It is different from the possesive "有" in sentences like "我有一本书" (I have a book).
+                <div class="col-md-4" id="explainMeaning">
+                    <h2>Meaning</h2> 
+                    <div class="wellblue">
+
+                    <p>The meaning of Chinese "You" sentences is the same as the "There is/are" sentences in English: it refers to the <span class="important">existence or presence </span> of someone/something in realtion to a place. </p>
+                    
+
+                    <p>Here, the keyword <span class="important">"有" means "exists"</span>."Wait a second..." You might be thinking: Doesn't "有" means have? Sometimes, not here.</p>
+
+                    <p> There are two <span class="important">different "有"s</span> in the Chinese language.In sentences such as "我有一本书" (I have a book), "有" means have. However, in existential sentences, "有" means "exists". Actaully the literal translation of "房间里有一个人" is "In the rrom, exists a person." We are learning the existential "有".</p>
+
+
+                     <div id="explainMeaningCheck" class="hidden">
+                     <br>
+                        <input type="checkbox" name="meaning" value="1correct">"有" has a meaning of possessive.<br>
+                        <input type="checkbox" name="meaning" value="2correct">"有" has a meaning of existence.<br>
+                        <input type="checkbox" name="meaning" value="3wrong">In the sentence "街上有很多车","有" means possessive.<br>
+                    </div>
+
+                    </div>
+
+
+                   
+
                 </div>
-                <h2>Use</h2>
-                <div class="col-md-4">
-                    You will use "有" sentences rather than "在" sentences when you are not familar with the thing you are talking about. For example, if you are talking about your phone with your friends. And you want to say "My phone is on the table." You should use "在"。 But if you are talking about something else, and noticed a phone on the table, you shall use "有"。
+                <div class="col-md-4" id="explainUse">
+                                <h2>Use</h2>
+                    <div class="wellblue">
+                    <p>There are many sentences to express the existence of things. When shall "有" sentences be used?</p>
+                    <p><span class="important">"有" sentences should be used to describe things that is not a mutual knowledge</span> between the speaker and the listener, or the writer or the reader. </p>
+                    <p>For example, when you are describing a picture you see the other day, you should use "有" sentences to introduce elements in the picture. After all the elements are introduced, they become a common knowledge, and "有" should not be used any more.</p>
+
+                 <div id="explainUseCheck" class="hidden">
+                 <br>
+                        <input type="checkbox" name="use" value="1correct">When you are describing your childhood art work to your new friend, you should use "有" sentences.<br>
+                        <input type="checkbox" name="use" value="2wrong">When you are telling your friend where his phone is, you should use "有".<br>
+                       
+                    </div>
+
+
+                    </div>
+
+
+
                 </div>
-            </div>
+
+                    
+               
+
+
+
+
+
+            </div>  
+            <div id="comprehensionChecking">
+                            <h5 id="checkInstruction" class="hidden">Check all the correct statements, and click <span><u>here</u></span> to check your answer
+                            </h5>
+                            <a href="#makeSentences" class="hidden" id="nextToFinal"><h3> Well done!Click <span><u>here</u></span> to take the final challenge</h3></a>
+                            <h3 class="hidden" id="checkAgain"> Click<span><u>here</u></span> to here to select again</h3>
+
+                            <button> Check Comprehension</button>
+
+</div>
         </div>
+
     </div>
     <div id="do">
+        <a name="makeSentences"></a>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -183,14 +264,33 @@
                 <h2>Make the sentences</h2>
             </div>
         </nav>
-        <h4> Imagine you are describing a room in your dream to a friend. Here is the room.  </h4>
-<div class="container">
-<div class="form-group">
-  <textarea class="form-control" rows="18" id="comment" placeholder="Start here!"></textarea>
-  <button class='btn=btn-info'>Finish</button>
-</div>
-</div>
+     
+        <div class="container" id="essayInstruction">
+           <h4> Describe your room. Write about what's in your room and their relative location in the textbox below. After you finish writing, click on the "Done!" button to see the description of my room. Compare your paragraph to my paragraph, and self check your grammar. </h4>
+            <div class="form-group">
+                <textarea class="form-control" rows="18" id="comment" placeholder="Start here!"></textarea>
+                <button class='btn=btn-info' id="done">Done!</button>
+            </div>
+        </div>
 
+        <div class="container hidden" id="essayResult">
+        <div class="row">
+            <div class="col-md-5 well" id="theDeveloperEssay">
+            <h3>The Developer's Room</h3>
+
+            <p>我的房间不大，但是很漂亮。<span>（This is a beginning sentence. You don't need to have it）</span>里面有很多家具。房间的中间有一张床，床的旁边有一个柜子。柜子上面有很多照片。柜子的对面有一个鞋架。鞋架的右边有两个书橱。书橱的右边有一张桌子。桌子上有一台电脑，一个台灯，和我的茶杯。<span>(I used 8 "You" sentences, you can use as many as you want. Pay attention to the grammar)</span>我很喜欢我的房间。<span>(This is an ending sentence. You don't need to have it)</span></p></div>
+            
+            <div class="col-md-2"></div>
+            <div class="col-md-5 well" id="theUserEssay">
+                <h3>My Room</h3>
+                    <p></p>
+            </div>
+
+        </div>
+                
+
+        </div>
+        <h6 class="hidden" id="finalConMess">Congratulations! You have finished this course.</h6>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
